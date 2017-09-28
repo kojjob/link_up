@@ -1,0 +1,72 @@
+<%= form_with(model: company, local: true) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :company_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :company_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary, id: :company_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agency %>
+    <%= form.text_field :agency, id: :company_agency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :company_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :posted %>
+    <%= form.datetime_select :posted, id: :company_posted %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, id: :company_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :company_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone, id: :company_telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contract %>
+    <%= form.text_field :contract, id: :company_contract %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_reference %>
+    <%= form.text_field :job_reference, id: :company_job_reference %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
