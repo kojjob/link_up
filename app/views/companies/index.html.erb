@@ -1,47 +1,29 @@
-<p id="notice"><%= notice %></p>
+<h1 class="text-center show-pg">Companies</h1>
 
-<h1>Companies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Salary</th>
-      <th>Agency</th>
-      <th>Location</th>
-      <th>Posted</th>
-      <th>Contact</th>
-      <th>Address</th>
-      <th>Telephone</th>
-      <th>Contract</th>
-      <th>Job reference</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
+  <div class="col-6 col-md-4">
+    <div class="profile">
+      <h3>Hello User</h3>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-8">
     <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.title %></td>
-        <td><%= company.description %></td>
-        <td><%= company.salary %></td>
-        <td><%= company.agency %></td>
-        <td><%= company.location %></td>
-        <td><%= company.posted %></td>
-        <td><%= company.contact %></td>
-        <td><%= company.address %></td>
-        <td><%= company.telephone %></td>
-        <td><%= company.contract %></td>
-        <td><%= company.job_reference %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+  <div class="card text-center">
+    <div class="card-header">
+      <h4><%= company.agency %></h4>
+    </div>
+    <div class="card-body">
+      <class="card-title">
+      <h6><%= company.title %></h6>
+      <%= link_to 'Read more', company %>
+    </div>
+    <div class="card-footer text-muted">
+      <%= time_ago_in_words(company.created_at) %>
+    </div>
+  </div>
+<% end %>
 <br>
 
-<%= link_to 'New Company', new_company_path %>
+  </div>
+</div>
+

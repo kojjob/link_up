@@ -1,4 +1,7 @@
-<%= form_with(model: company, local: true) do |form| %>
+<div class="container">
+  <div class="rows">
+    <div class="col-md-8 col-md-offset-2">
+      <%= form_with(model: company, local: true) do |form| %>
   <% if company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
@@ -11,62 +14,66 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :company_title %>
+    <%= form.text_field :title, id: :company_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :company_description %>
+    <%= form.text_area :description, id: :company_description, class: "form-control", cols:"30", rows:"10" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :salary %>
-    <%= form.text_field :salary, id: :company_salary %>
+    <%= form.text_field :salary, id: :company_salary, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :agency %>
-    <%= form.text_field :agency, id: :company_agency %>
+    <%= form.text_field :agency, id: :company_agency, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location %>
-    <%= form.text_field :location, id: :company_location %>
+    <%= form.text_field :location, id: :company_location, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-check">
     <%= form.label :posted %>
-    <%= form.datetime_select :posted, id: :company_posted %>
+    <%= form.datetime_select :posted, id: :company_posted, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :contact %>
-    <%= form.text_field :contact, id: :company_contact %>
+    <%= form.text_field :contact, id: :company_contact, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :address %>
-    <%= form.text_field :address, id: :company_address %>
+    <%= form.text_field :address, id: :company_address, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :telephone %>
-    <%= form.text_field :telephone, id: :company_telephone %>
+    <%= form.text_field :telephone, id: :company_telephone, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :contract %>
-    <%= form.text_field :contract, id: :company_contract %>
+    <%= form.text_field :contract, id: :company_contract, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :job_reference %>
-    <%= form.text_field :job_reference, id: :company_job_reference %>
+    <%= form.text_field :job_reference, id: :company_job_reference, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary btn-block" %>
   </div>
 <% end %>
+
+    </div>
+  </div>
+</div>

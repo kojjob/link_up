@@ -1,23 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @company.title %>
-</p>
+<h2 class="text-center">
+  <b><%= @company.title %></b>
+</h2>
+<h5 class="text-center">
+  <%= @company.agency %> 
+</h5>
 
 <p>
-  <strong>Description:</strong>
   <%= @company.description %>
 </p>
 
 <p>
-  <strong>Salary:</strong>
-  <%= @company.salary %>
-</p>
-
-<p>
-  <strong>Agency:</strong>
-  <%= @company.agency %>
+  <%= number_to_currency(@company.salary) %>
 </p>
 
 <p>
@@ -27,7 +22,7 @@
 
 <p>
   <strong>Posted:</strong>
-  <%= @company.posted %>
+  <%= time_ago_in_words(@company.posted) %>
 </p>
 
 <p>

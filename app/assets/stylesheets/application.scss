@@ -1,0 +1,26 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "header";
+*{
+	margin: 0;
+	padding: 0;
+}
+// body {
+// 	padding: 60px;
+//   margin: 15px auto;
+// }
+
+// .profile {
+// 	background: #000;
+// 	color: #fff;
+//   width: 100%;
+//   float: left;
+//   padding: 15px;
+//   box-sizing: border-box;
+//   text-align: center;
+// }
+// .show-pg{
+// 	padding: 8px;
+// }
